@@ -1,0 +1,22 @@
+.cur > .row > .col-md-12 > h1{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0px 10px 0px;
+}
+.imgusu{
+    float: right;
+}
+.pessoa > p > span{
+    font-weight: bold;
+}
+.titulo > p {
+    padding-left: 25px;
+    margin-bottom: 0px;
+}
+.titulo > h2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+.pessoa > p {
+    margin-bottom: 5px;
+}
