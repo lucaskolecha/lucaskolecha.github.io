@@ -22,6 +22,6 @@
 }
 @media screen and (max-width: 500px) {
     .pessoa > p {
-        font-size: 13px;
+        font-size: 50px;
     }
 }
