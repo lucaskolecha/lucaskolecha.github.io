@@ -20,3 +20,8 @@
 .pessoa > p {
     margin-bottom: 5px;
 }
+@media screen and (max-width: 500px) {
+    .pessoa > p {
+        font-size: 13px;
+    }
+}
