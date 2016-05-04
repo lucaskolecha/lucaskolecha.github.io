@@ -10,7 +10,7 @@
     margin-top: 30px;
     color: #fff;
     text-align: center;
-    background-color: green;
+    background-color: #ff0000;
     border-radius: 10px;
     width: 100%;
     height: 115px;
@@ -33,4 +33,18 @@
 }
 #sobrecarga{
     display:none;
+}
+#polimorfismo{
+    display:none;
+}
+#encapsulamento{
+    display:none;
+}
+.prin > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+.esp{
+    margin-bottom: 50px;
 }
