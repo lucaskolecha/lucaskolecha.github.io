@@ -1,0 +1,3 @@
+Herança
+Enquanto programamos em Java, há a necessidade de trabalharmos com várias classes. Muitas vezes, classes diferentes tem características comuns, então, ao invés de criarmos uma nova classe com todas essas características usamos as características de um objeto ou classe já existente.
+Ou seja, herança é, na verdade, uma classe derivada de outra classe.

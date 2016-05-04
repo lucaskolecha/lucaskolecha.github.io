@@ -4,40 +4,173 @@
         <!-- Bootstrap CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/meuestilo.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <script>
+            function fadeOut(id, time) {
+                fade(id, time, 100, 0);
+            }
+
+            function fadeIn(id, time) {
+                fade(id, time, 0, 100);
+            }
+
+            function fade(id, time, ini, fin) {
+                var target = document.getElementById(id);
+                var alpha = ini;
+                var inc;
+                if (fin >= ini) {
+                    inc = 2;
+                } else {
+                    inc = -2;
+                }
+                timer = (time * 1000) / 50;
+                var i = setInterval(
+                        function () {
+                            if ((inc > 0 && alpha >= fin) || (inc < 0 && alpha <= fin)) {
+                                clearInterval(i);
+                            }
+                            setAlpha(target, alpha);
+                            alpha += inc;
+                        }, timer);
+            }
+
+            function setAlpha(target, alpha) {
+                target.style.filter = "alpha(opacity=" + alpha + ")";
+                target.style.opacity = alpha / 100;
+            }
+
+            function her() {
+                fadeOut("exemplo", 0.5);
+                setTimeout("document.getElementById('exemplo').style.display = 'none'", 500);
+                setTimeout("document.getElementById('herenca').style.display = 'block'", 500);
+                fadeIn("herenca", 1);
+            }
+            function exx() {
+                fadeOut("herenca", 0.5);
+                setTimeout("document.getElementById('herenca').style.display = 'none'", 500);
+                setTimeout("document.getElementById('exemplo').style.display = 'block'", 500);
+                fadeIn("exemplo", 1);
+            }
+
+        </script>
     </head>
     <body>
         <div class="container-fluid">
-            <div class="container cur">
+            <div class="top">
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 itens">
+                    <button class="box mitem" onclick="her();">
+                        <i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i>
+                    </button>
+                    <h3>Hernaça</h3>
+                </div>
+                <div class="col-md-3 itens">
+                    <button class="box mitem" onclick="exx();">
+                        <i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i>
+                    </button>
+                    <h3>Sobrecarga</h3>
+                </div>
+                <div class="col-md-3 itens">
+                    <button class="box mitem">
+                        <i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i>
+                    </button>
+                    <h3>Polimorfismo</h3>
+                </div>
+                <div class="col-md-3 itens">
+                    <button class="box mitem">
+                        <i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i>
+                    </button>
+                    <h3>Emcapsulamento</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <hr>
+        </div>
+        <div class="container">
+            <div id="herenca">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Curriculo</h1>
+                        <center>
+                            <h1>Henrança</h1>
+                        </center>
+                        <div class="row">
+                            <div class="col-dm-12">
+                                <h3>Definição:</h3>
+                                <p>Enquanto programamos em Java, há a necessidade de trabalharmos com várias classes. Muitas vezes, classes diferentes tem características comuns, então, ao invés de criarmos uma nova classe com todas essas características usamos as características de um objeto ou classe já existente.
+                                    Ou seja, herança é, na verdade, uma classe derivada de outra classe.</p>
+                            </div>
+                        </div>
                         <hr>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="img/eu.jpg" class="img-responsive img-circle imgusu" width="40%">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="pessoa">
-                            <p><span>Nome: </span>Lucas Kolecha da Silva</p> 
-                            <p><span>Endere&ccedil;o: </span>Rua Pelicano</p>
-                            <p><span>Data de Nascimento: </span> 22/12/1997</p> 
-                            <p><span>Estado Civil: </span>Solteiro</p> 
-                            <p><span>Cnh: </span> AB</p> 
-                            <p><span>Contato: </span>(43)9908-0894</p> 
-                            <p><span>Email: </span>lkolecha@hotmail.com</p> 
+                        <div class="row ex">
+                            <h3>Exemplo:</h3>
+                            <br>
+                            <div class="col-md-3">
+                                <img src="imgs/Objeto1.png" class="img-responsive bord">
+                            </div>
+                            <div class="col-md-7">
+                                <h4>Objeto:</h4>
+                                <p>Aqui estamos criando um objeto qualquer...</p>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row ex">
+                            <br>
+                            <div class="col-md-3">
+                                <img src="imgs/Extends1.png" class="img-responsive bord">
+                            </div>
+                            <div class="col-md-7">
+                                <h4>Extends:</h4>
+                                <p>Aqui que começamos a enteder melhor a Herença, com o comando Extends dizemos ao programa que arma é um objeto sendo assim os atributos pertence a ele também...</p>
+
+                            </div>
                         </div>
                     </div>
                 </div>
-                <hr>
+            </div>
+            <div id="exemplo">
                 <div class="row">
-                    <div class="col-md-12 titulo">
-                        <h2>Forma&ccedil;&atilde;o Academica</h2>
-                        <p>Cursando Ensino Superior</p>
-                        <br>
-                        <h2>Forma&ccedil;&atilde;o Profissional</h2>
-                        <p>Programador com conhecimento regular em PHP1</p>
+                    <div class="col-md-12">
+                        <center>
+                            <h1>Exemplo</h1>
+                        </center>
+                        <div class="row">
+                            <div class="col-dm-12">
+                                <h3>Definição:</h3>
+                                <p>Enquanto programamos em Java, há a necessidade de trabalharmos com várias classes. Muitas vezes, classes diferentes tem características comuns, então, ao invés de criarmos uma nova classe com todas essas características usamos as características de um objeto ou classe já existente.
+                                    Ou seja, herança é, na verdade, uma classe derivada de outra classe.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row ex">
+                            <h3>Exemplo:</h3>
+                            <br>
+                            <div class="col-md-3">
+                                <img src="imgs/Objeto1.png" class="img-responsive bord">
+                            </div>
+                            <div class="col-md-7">
+                                <h4>Objeto:</h4>
+                                <p>Aqui estamos criando um objeto qualquer...</p>
+
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row ex">
+                            <br>
+                            <div class="col-md-3">
+                                <img src="imgs/Extends1.png" class="img-responsive bord">
+                            </div>
+                            <div class="col-md-7">
+                                <h4>Extends:</h4>
+                                <p>Aqui que começamos a enteder melhor a Herença, com o comando Extends dizemos ao programa que arma é um objeto sendo assim os atributos pertence a ele também...</p>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
