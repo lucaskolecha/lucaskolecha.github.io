@@ -1,271 +1,146 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <!-- Bootstrap CSS -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/meuestilo.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <script>
-            function fadeOut(id, time) {
-                fade(id, time, 100, 0);
-            }
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./css/kolechastrap.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
 
-            function fadeIn(id, time) {
-                fade(id, time, 0, 100);
-            }
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <h2>Grid kolechastrap</h2>
+            </center>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
+        <div class="col-md-1">
+            <div style="background-color: darkgreen;height: 50px;"></div>
+        </div>
 
-            function fade(id, time, ini, fin) {
-                var target = document.getElementById(id);
-                var alpha = ini;
-                var inc;
-                if (fin >= ini) {
-                    inc = 2;
-                } else {
-                    inc = -2;
-                }
-                timer = (time * 1000) / 50;
-                var i = setInterval(
-                        function () {
-                            if ((inc > 0 && alpha >= fin) || (inc < 0 && alpha <= fin)) {
-                                clearInterval(i);
-                            }
-                            setAlpha(target, alpha);
-                            alpha += inc;
-                        }, timer);
-            }
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-2">
+            <div style="background-color: black;height: 50px;"></div>
+        </div>
+        <div class="col-md-2">
+            <div style="background-color: black;height: 50px;"></div>
+        </div>
+        <div class="col-md-2">
+            <div style="background-color: black;height: 50px;"></div>
+        </div>
+        <div class="col-md-2">
+            <div style="background-color: black;height: 50px;"></div>
+        </div>
+        <div class="col-md-2">
+            <div style="background-color: black;height: 50px;"></div>
+        </div>
+        <div class="col-md-2">
+            <div style="background-color: black;height: 50px;"></div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-3">
+            <div style="background-color: darkmagenta;height: 50px;"></div>
+        </div>
+        <div class="col-md-3">
+            <div style="background-color: darkmagenta;height: 50px;"></div>
+        </div>
+        <div class="col-md-3">
+            <div style="background-color: darkmagenta;height: 50px;"></div>
+        </div>
+        <div class="col-md-3">
+            <div style="background-color: darkmagenta;height: 50px;"></div>
+        </div>
 
-            function setAlpha(target, alpha) {
-                target.style.filter = "alpha(opacity=" + alpha + ")";
-                target.style.opacity = alpha / 100;
-            }
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4">
+            <div style="background-color: brown;height: 50px;"></div>
+        </div>
+        <div class="col-md-4">
+            <div style="background-color: brown;height: 50px;"></div>
+        </div>
+        <div class="col-md-4">
+            <div style="background-color: brown;height: 50px;"></div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <div style="background-color: blue;height: 50px;"></div>
+        </div>
+        <div class="col-md-6">
+            <div style="background-color: blue;height: 50px;"></div>
+        </div>
+    </div>
 
-            function her() {
-                fadeOut("sobrecarga", 0.5);
-                fadeOut("polimorfismo", 0.5);
-                fadeOut("encapsulamento", 0.5);
-                setTimeout("document.getElementById('sobrecarga').style.display = 'none'", 500);
-                setTimeout("document.getElementById('polimorfismo').style.display = 'none'", 500);
-                setTimeout("document.getElementById('encapsulamento').style.display = 'none'", 500);
-                setTimeout("document.getElementById('herenca').style.display = 'block'", 500);
 
-                fadeIn("herenca", 1);
-            }
-            function exx() {
-                fadeOut("herenca", 0.5);
-                fadeOut("polimorfismo", 0.5);
-                fadeOut("encapsulamento", 0.5);
-                setTimeout("document.getElementById('herenca').style.display = 'none'", 500);
-                setTimeout("document.getElementById('encapsulamento').style.display = 'none'", 500);
-                setTimeout("document.getElementById('polimorfismo').style.display = 'none'", 500);
-                setTimeout("document.getElementById('sobrecarga').style.display = 'block'", 500);
-                fadeIn("sobrecarga", 1);
-            }
-            function pol() {
-                fadeOut("herenca", 0.5);
-                fadeOut("sobrecarga", 0.5);
-                fadeOut("encapsulamento", 0.5);
-                setTimeout("document.getElementById('herenca').style.display = 'none'", 500);
-                setTimeout("document.getElementById('encapsulamento').style.display = 'none'", 500);
-                setTimeout("document.getElementById('sobrecarga').style.display = 'none'", 500);
-                setTimeout("document.getElementById('polimorfismo').style.display = 'block'", 500);
-                fadeIn("polimorfismo", 1);
-            }
-            function enc() {
-                fadeOut("herenca", 0.5);
-                fadeOut("sobrecarga", 0.5);
-                fadeOut("polimorfismo", 0.5);
-                setTimeout("document.getElementById('herenca').style.display = 'none'", 500);
-                setTimeout("document.getElementById('polimorfismo').style.display = 'none'", 500);
-                setTimeout("document.getElementById('sobrecarga').style.display = 'none'", 500);
-                setTimeout("document.getElementById('encapsulamento').style.display = 'block'", 500);
-                fadeIn("encapsulamento", 1);
-            }
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-        </script>
-    </head>
-    <body>
-        <div class="container-fluid">
-            <div class="top">
 
+    <div class="row">
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div>
+                <img class="img-responsive" src="http://www.m2mp.com.br/imagens/afinal.png">
+                <h3>Titulo da noticia</h3>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 prin">
-                    <h1>Java</h1>
-                </div>
-            </div>
+        <div class="col-md-6">
+            <p>
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.
+            </p>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 itens">
-                    <button class="box mitem" onclick="her();">
-                        <i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i>
-                    </button>
-                    <h3>Herança</h3>
-                </div>
-                <div class="col-md-3 itens">
-                    <button class="box mitem" onclick="exx();">
-                        <i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i>
-                    </button>
-                    <h3>Sobrecarga</h3>
-                </div>
-                <div class="col-md-3 itens">
-                    <button class="box mitem" onclick="pol();">
-                        <i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i>
-                    </button>
-                    <h3>Polimorfismo</h3>
-                </div>
-                <div class="col-md-3 itens">
-                    <button class="box mitem" onclick="enc();">
-                        <i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i>
-                    </button>
-                    <h3>Emcapsulamento</h3>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <hr>
-        </div>
-        <div class="container">
-            <div id="herenca">
-                <div class="row">
-                    <div class="col-md-12">
-                        <center>
-                            <h1>Herança</h1>
-                        </center>
-                        <div class="row">
-                            <div class="col-dm-12">
-                                <h3>Definição:</h3>
-                                <p>Enquanto programamos em Java, há a necessidade de trabalharmos com várias classes. Muitas vezes, classes diferentes tem características comuns, então, ao invés de criarmos uma nova classe com todas essas características usamos as características de um objeto ou classe já existente.
-                                    Ou seja, herança é, na verdade, uma classe derivada de outra classe.</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row ex">
-                            <h3>Exemplo:</h3>
-                            <br>
-                            <div class="col-md-3">
-                                <img src="imgs/Objeto1.png" class="img-responsive bord">
-                            </div>
-                            <div class="col-md-7">
-                                <h4>Objeto:</h4>
-                                <p>Aqui estamos criando um objeto qualquer...</p>
-
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row ex">
-                            <br>
-                            <div class="col-md-3">
-                                <img src="imgs/Extends1.png" class="img-responsive bord">
-                            </div>
-                            <div class="col-md-7 esp">
-                                <h4>Extends:</h4>
-                                <p>Aqui que começamos a enteder melhor a Herença, com o comando Extends dizemos ao programa que arma é um objeto sendo assim os atributos pertence a ele também...</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="sobrecarga">
-                <div class="row">
-                    <div class="col-md-12">
-                        <center>
-                            <h1>Sobrecarga</h1>
-                        </center>
-                        <div class="row">
-                            <div class="col-dm-12">
-                                <h3>História:</h3>
-                                <p>A sobrescrita e a sobrecarga de métodos acompanham o Java desde o seu início. Estas são características permanentes desta linguagem orientada a objetos, seja ela utilizada em um ambiente de desenvolvimento móvel (Java ME), desktop (Java SE) ou corporativo (Java EE). No entanto, mesmo com tal importância, existem muitos questionamentos que rondam esses dois conceitos.</p>
-
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-dm-12">
-                                <h3>Definição:</h3>
-                                <p>O termo sobrecarga vem do fato de declararmos vários métodos com o mesmo nome, estamos carregando o aplicativo com o 'mesmo' método.
-                                    A única diferença entre esses métodos são seus parâmetros e/ou tipo de retorno.</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row ex">
-                            <h3>Exemplo:</h3>
-                            <br>
-                            <div class="col-md-12">
-                                <img src="imgs/sobrecarga.png" class="img-responsive bord">
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="polimorfismo">
-                <div class="row">
-                    <div class="col-md-12">
-                        <center>
-                            <h1>Polimorfismo</h1>
-                        </center>
-                        <div class="row">
-                            <div class="col-dm-12">
-                                <h3>Definição:</h3>
-                                <p>Polimorfismo é a capacidade de um objeto poder ser referenciado de várias formas. (cuidado, polimorfismo não quer dizer que o objeto fica se transformando, muito pelo contrário, um objeto nasce de um tipo e morre daquele tipo, o que pode mudar é a maneira como nos referimos a ele).<br>
-                                    No caso de polimorfismo, é necessário que os métodos tenham exatamente a mesma identificação, sendo utilizado o mecanismo de redefinição de métodos, que é o mesmo que sobrescrita de métodos em classes derivadas.  A redefinição ocorre quando um método cuja assinatura já tenha sido especificada recebe uma nova definição, ou seja, um novo corpo, em uma classe derivada. É importante observar que, quando polimorfismo está sendo utilizado, o comportamento que será adotado por um método só será definido durante a execução.</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row ex">
-                            <h3>Exemplo:</h3>
-                            <br>
-                            <div class="col-md-12">
-                                <img src="imgs/poli.png" class="img-responsive bord">
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="encapsulamento">
-                <div class="row">
-                    <div class="col-md-12">
-                        <center>
-                            <h1>Encapsulamento</h1>
-                        </center>
-                        <div class="row">
-                            <div class="col-dm-12">
-                                <h3>Definição:</h3>
-                                <p>Encapsulamento vem de encapsular, que em programação orientada a objetos significa separar o programa em partes, o mais isolado possível. A idéia é tornar o software mais flexível, fácil de modificar e de criar novas implementações. O Encapsulamento serve para controlar o acesso aos atributos e métodos de uma classe. É uma forma eficiente de proteger os dados manipulados dentro da classe, além de determinar onde esta classe poderá ser manipulada. Usamos o nível de acesso mais restritivo, private, que faça sentido para um membro particular. Sempre usamos private, a menos que tenhamos um bom motivo para deixá-lo com outro nível de acesso. Não devemos permitir o acesso público aos membros, exceto em caso de ser constantes. Isso porque membros públicos tendem a nos ligar a uma implementação em particular e limita a nossa flexibilidade em mudar o código. O encapsulamento que é dividido em dois níveis:
-                                <ul>
-                                    <li>Nível de classe: Quando determinamos o acesso de uma classe inteira que pode ser public ou Package-Private (padrão);</li>
-                                    <li>Nível de membro: Quando determinamos o acesso de atributos ou métodos de uma classe que podem ser public, private, protected ou Package-Private (padrão).</li>
-                                </ul>
-                                Então para ter um método encapsulado utilizamos um modificador de acesso que geralmente é public, além do tipo de retorno dele. Para se ter acesso a algum atributo ou método que esteja encapsulado utiliza-se o conceito de get e set. Por definição, com SET é feita uma atribuição a algum atributo, ou seja, define, diz o valor que algum atributo deve ter. E  com GET é possível recuperar esse valor. 
-                                </p>
-                            </div>
-                            <br>
-                            <div class="row ex">
-                                <h3>Exemplo:</h3>
-                                <br>
-                                <div class="col-md-12">
-                                    <img src="imgs/encap.png" class="img-responsive bord">
-                                    <br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="top">
-
-            </div>
-        </div>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="js/bootstrap.min.js"></script>
-    </body>
+    </div>
+</div>
+</body>
 </html>
